@@ -1,0 +1,10 @@
+VS Code
+   ↓
+GitHub Push
+   ↓
+GitHub Actions
+   ↓
+connect AWS EC2 server using ssh
+   ↓
+restart application manually
+
