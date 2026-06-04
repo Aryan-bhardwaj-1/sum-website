@@ -1,10 +1,46 @@
-VS Code
-   ↓
-GitHub Push
-   ↓
-GitHub Actions
-   ↓
-connect AWS EC2 server using ssh
-   ↓
-restart application manually
+PIPELINE YAML HERE -
+name: Deploy Flask App to EC2
 
+on:main
+  push:main
+    branches:main
+
+
+jobs:ubuntu-latest
+  deploy:ubuntu-latest
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+
+
+          script: |here is all cmd
+          update server : sudo apt update
+          installed .py,pip,git and other packages
+          git clone to Ec2 instance using git 
+          installed flask :sudo apt install flask app -y
+          test app.py on server 
+          used gunicorn to run flask application 
+
+          configure AWS security group to allow traffic on required port.
+
+
+            cd sum-website
+            git pull origin main
+            source venv/bin/activate
+            pip install -r requirements.txt
+            sudo systemctl restart your flask-app 
+          install  gunicorn || true
+           run gunicorn app:app --bind 0.0.0.0:8000 &
+
+           untlil found an url . 
