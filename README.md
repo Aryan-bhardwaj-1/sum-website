@@ -29,7 +29,7 @@ Clone the Repository
 
 Clone the project from GitHub:
 
-git clone https://github.com/YOUR_USERNAME/sum-website.git
+git clone https://github.com/MY_USERNAME/sum-website.git
 
 
 Move into the project folder:
@@ -111,7 +111,7 @@ sudo apt install python3 python3-pip git -y
 
 Step 4: Clone Project on EC2
 
-git clone https://github.com/YOUR_USERNAME/sum-website.git
+git clone https://github.com/MY_USERNAME/sum-website.git
 cd sum-website
 
 ---
